@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -e
+
+function fail() {
+  local code="$1"
+  shift
+  >&2 echo "$@"
+  exit "$code"
+}
+
+function local_cleanup() {
+  local tmp_dir="$1"
+  test -d "$tmp_dir" && rm -fr "$tmp_dir"
+}
+
+function create_temporary_directory() {
+  mktemp -d -t scronpt.XXXXXX
+}
+
+tmp_dir=`create_temporary_directory`
+trap "local_cleanup $tmp_dir" EXIT
+
+script="$SCRONPT_SCRIPT"
+
+if ! test -e "$script"; then
+  fail 10 "Script '$script' does not exist."
+elif ! test -x "$script"; then
+  fail 11 "Script '$script' is not executable."
+fi
+
+cd "$tmp_dir"
+exec "$script"
