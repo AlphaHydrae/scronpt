@@ -15,15 +15,15 @@ Scronpt will run the arbitrary script you provide on your schedule.
 # Run a script hourly (default schedule)
 docker run --rm --init \
        -v "/path/to/your/script:/usr/local/bin/script" \
-       ghcr.io/alphahydrae/scronpt
+       ghcr.io/alphahydrae/scronpt:1
 
 # Run a script every day a quarter past midnight
 docker run --rm --init -e "SCRONPT_CRON=15 0 * * *" \
        -v "/path/to/your/script:/usr/local/bin/script" \
-       ghcr.io/alphahydrae/scronpt
+       ghcr.io/alphahydrae/scronpt:1
 
 # Run the default script that says hello, every minute
-docker run --rm --init -e "SCRONPT_MINUTE=*" ghcr.io/alphahydrae/scronpt
+docker run --rm --init -e "SCRONPT_MINUTE=*" ghcr.io/alphahydrae/scronpt:1
 ```
 
 > [!TIP]
