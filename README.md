@@ -3,6 +3,7 @@
 > Run an arbitrary [Bash][bash] script on a [cron][cron] schedule, in a free
 > [Docker][docker] container 🍦
 
+[![build](https://github.com/AlphaHydrae/scronpt/actions/workflows/build.yml/badge.svg)](https://github.com/AlphaHydrae/scronpt/actions/workflows/build.yml)
 [![MIT License](https://img.shields.io/static/v1?label=license&message=MIT&color=informational)](https://opensource.org/licenses/MIT)
 
 ## Usage
