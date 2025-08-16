@@ -4,9 +4,12 @@
 > [Docker][docker] container 🍦
 
 [![build](https://github.com/AlphaHydrae/scronpt/actions/workflows/build.yml/badge.svg)](https://github.com/AlphaHydrae/scronpt/actions/workflows/build.yml)
+[![publish](https://github.com/AlphaHydrae/scronpt/actions/workflows/publish.yml/badge.svg)](https://github.com/AlphaHydrae/scronpt/actions/workflows/publish.yml)
 [![MIT License](https://img.shields.io/static/v1?label=license&message=MIT&color=informational)](https://opensource.org/licenses/MIT)
 
 ## Usage
+
+Scronpt will run the arbitrary script you provide on your schedule.
 
 ```bash
 # Run a script hourly (default schedule)
@@ -23,10 +26,8 @@ docker run --rm --init -e "SCRONPT_CRON=15 0 * * *" \
 docker run --rm --init -e "SCRONPT_MINUTE=*" ghcr.io/alphahydrae/scronpt
 ```
 
-Scronpt will run the arbitrary script you provide on your schedule.
-
 > [!TIP]
-> The script runs in a temporary directory that is deleted once your script has
+> Your script runs in a temporary directory that is deleted once your script has
 > finished executing, in case you need to work on some files.
 
 ## Configuration
