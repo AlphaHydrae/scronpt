@@ -1,6 +1,7 @@
 # scronpt
 
-> Run an arbitrary [Bash][bash] script on a [cron][cron] schedule.
+> Run an arbitrary [Bash][bash] script on a [cron][cron] schedule, in a free
+> [Docker][docker] container 🍦
 
 [![MIT License](https://img.shields.io/static/v1?label=license&message=MIT&color=informational)](https://opensource.org/licenses/MIT)
 
@@ -53,3 +54,4 @@ Scronpt will exit with the following codes when known errors occur:
 
 [bash]: https://www.gnu.org/software/bash/
 [cron]: https://en.wikipedia.org/wiki/Cron
+[docker]: https://www.docker.com
